@@ -1,0 +1,230 @@
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --White: hsl(0, 0%, 100%);
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+
+  /* FONT STYLES*/
+  --Young-Serif: "Young Serif", serif;
+  --Outfit: "Outfit", sans-serif;
+}
+
+/* CSS RESET*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Stone-150);
+  padding: 7.688rem 0rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Global styling */
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--White);
+  max-width: 736px;
+  border-radius: 24px 24px 24px 24px;
+  padding: 2.5rem 2.5rem;
+}
+
+.head-content > h1 {
+  font-family: var(--Young-Serif);
+  color: var(--Stone-900);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--Young-Serif);
+  font-size: 1.75rem;
+  color: var(--Brown-800);
+  font-weight: 400;
+}
+
+.head-content > p,
+.Nutri-wrapper > p {
+  font-family: var(--Outfit);
+  color: var(--Stone-600);
+  line-height: 1.5;
+}
+
+/* Preparation section */
+
+.prep-wrapper {
+  background-color: var(--Rose-50);
+  border-radius: 12px;
+}
+
+.prep-wrapper > h3 {
+  color: var(--Rose-800);
+  font-weight: 600;
+  font-family: var(--Outfit);
+  font-size: 1.25rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1rem;
+  padding-left: 1.75rem;
+}
+
+.prep-wrapper > ul {
+  font-family: var(--Outfit);
+  padding-bottom: 1.75rem;
+}
+
+.prep-wrapper > ul > li {
+  padding: 0.5rem 0rem;
+  color: var(--Stone-600);
+}
+
+.prep-wrapper > ul > li::marker {
+  color: var(--Rose-800);
+}
+
+.bold-class {
+  font-weight: 600;
+}
+
+/* Ingredients section */
+
+.Ingred-wrapper {
+  padding-top: 2rem;
+}
+
+.Ingred-wrapper > h2 {
+  padding-bottom: 1.5rem;
+}
+
+.Ingred-wrapper > ul > li::marker {
+  color: var(--Brown-800);
+}
+
+.Ingred-wrapper > ul {
+  line-height: 1.5;
+}
+
+.Ingred-wrapper > ul > li,
+.Instruct-wrapper > ol > li {
+  font-size: 1rem;
+  color: var(--Stone-600);
+  padding-left: 1rem;
+  font-family: var(--Outfit);
+}
+
+/* Line */
+.line {
+  width: 100%;
+  border: 1px solid var(--Stone-150);
+  margin: 2rem 0rem;
+}
+
+/* Instructions */
+
+.Instruct-wrapper > h2 {
+  padding-bottom: 1.5rem;
+}
+
+.Instruct-wrapper > ol > li {
+  line-height: 1.5;
+  padding: 0.5rem 0rem;
+  padding-left: 1rem;
+}
+
+.Instruct-wrapper > ol > li::marker {
+  color: var(--Brown-800);
+  font-weight: bold;
+}
+
+/* Nutrition */
+
+.Nutri-wrapper {
+  padding-bottom: 2.5rem;
+}
+
+.Nutri-wrapper > p {
+  padding: 2rem 0rem;
+}
+
+.nutri-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nutri-rows {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-around;
+  padding-bottom: 0.75rem;
+}
+
+.line2 {
+  border: 1px solid var(--Stone-150);
+  margin-bottom: 0.75rem;
+}
+
+.nutr-val {
+  width: 115px;
+  text-align: left;
+  color: var(--Brown-800);
+  font-family: var(--Outfit);
+  font-weight: bold;
+}
+
+.nutr-name {
+  width: 115px;
+  text-align: left;
+  color: var(--Stone-600);
+  font-family: var(--Outfit);
+}
+
+.head-content {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.head-content > h1 {
+  font-size: 2.25rem;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 667px) {
+  body {
+    padding: 0rem;
+  }
+  .content-wrapper {
+    height: 100%;
+  }
+
+  .content-wrapper,
+  img {
+    border-radius: 0;
+    padding: 0rem;
+  }
+
+  .content-text-wrapper {
+    padding: 0rem 2rem;
+  }
+}
